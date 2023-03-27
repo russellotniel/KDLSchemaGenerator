@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { ReactComponent as SendIcon } from '../../images/icon-send.svg';
 
 const Checkbox = ({ features, handleSystemFeatures }) => {
 	const [input, setInput] = useState('');

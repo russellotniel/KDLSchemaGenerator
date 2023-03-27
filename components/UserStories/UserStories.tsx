@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { UserStoriesGenerator } from '../../helpers/helpers';
-import { ReactComponent as SendIcon } from '../../images/icon-send.svg';
 import Checkbox from './Checkbox';
-const Generator = ({ handleSystemFeatures, loading, setLoading }) => {
-	const dispatch = useDispatch();
+
+const Generator: React.FC = ({ handleSystemFeatures, loading, setLoading }) => {
 	const [input, setInput] = useState('');
 	const [features, setFeatures] = useState([]);
 	const handleChange = (event) => {
@@ -40,9 +38,10 @@ const Generator = ({ handleSystemFeatures, loading, setLoading }) => {
 		<div className='w-100'>
 			<div className='flex-column input-container'>
 				<textarea className='form-control ' type='text' id='floatingTextarea' placeholder='What do you want to make...' value={input} onChange={handleChange} disabled={loading} />
-				<button className='button-primary' onClick={sendMessage} disabled={loading}>
+				{/* <button className='button-primary' onClick={sendMessage} disabled={loading}>
 					<SendIcon className='send-icon' />
-				</button>
+				</button> */}
+				<button>TEST</button>
 			</div>
 			{features.length != 0 ? (
 				<div className='container p-4'>
